@@ -1,6 +1,5 @@
 # Node.js
 
-
 # Build a general Node.js project with npm.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
@@ -12,7 +11,10 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-
+- task: CmdLine@2
+  inputs:
+    script: 'webdriver-manager start'
+    
 - task: CmdLine@2
   inputs:
     script: 'protractor conf.js'
