@@ -2,8 +2,6 @@
 // then run `protractor conf.js`.
 import {Config} from 'protractor';
 
-seleniumAddress: 'http://localhost:4444/wd/hub',
-directConnect: true,
 
 export let config: Config = {
   
