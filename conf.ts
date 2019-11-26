@@ -2,6 +2,9 @@
 // then run `protractor conf.js`.
 import {Config} from 'protractor';
 
+seleniumAddress: 'http://localhost:4444/wd/hub',
+directConnect: true,
+
 export let config: Config = {
   
   multiCapabilities: [
@@ -14,7 +17,7 @@ export let config: Config = {
 
         'chromeOptions': {
           //args: ["disable-infobars"]
-           args: [ "--headless", "--window-size=800,600"]
+          // args: [ "--headless", "--window-size=800,600"]
           excludeSwitches: ["enable-automation"],
           useAutomationExtension: false
         },
@@ -29,8 +32,7 @@ export let config: Config = {
     
     },
   specs: ['Specs/spec.js', ],
-  seleniumAddress: 'http://localhost:4444/wd/hub',
-  directConnect: true,
+  
   
   framework: 'jasmine2',
   onPrepare: function() {
