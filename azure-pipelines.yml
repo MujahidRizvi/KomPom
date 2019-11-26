@@ -16,7 +16,7 @@ steps:
 - task: CmdLine@2
   inputs:
     script: 'protractor conf.js'
-    workingDirectory: './KomPom'
+    workingDirectory: 'KomPom'
 
     
 - script: |
