@@ -16,19 +16,9 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- task: Npm@1
-  inputs:
-    command: 'install'
-    workingDir: 'https://github.com/MujahidChrisAlex/KomPom'
-
 - script: |
     npm install
-    npm install protractor -g
-    npm run build
-    npm install -g @angular/cli
-    npm install typescript
-    npm install jasmine
-    npm install --save-dev @types/jasmine
+    
 
   displayName: 'npm install and build'
 
