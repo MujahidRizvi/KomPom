@@ -19,10 +19,10 @@ steps:
     workingDirectory: '$(Build.SourcesDirectory)'
 
 
-- task: PowerShell@2
+- task: CmdLine@2
   inputs:
-    targetType: 'inline'
-    script: 'Start-Process webdriver-manager Start'
+    script: 'nohup webdriver-manager start'
+    workingDirectory: '$(Build.SourcesDirectory)'
     
 - task: CmdLine@2
   inputs:
