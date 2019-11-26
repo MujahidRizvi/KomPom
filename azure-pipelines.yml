@@ -18,6 +18,10 @@ steps:
     script: 'npm install protractor -g'
     workingDirectory: '$(Build.SourcesDirectory)'
 
+- task: CmdLine@2
+  inputs:
+    script: 'webdriver-manager update'
+    workingDirectory: '$(Build.SourcesDirectory)'
 
 - task: CmdLine@2
   inputs:
