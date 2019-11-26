@@ -18,12 +18,6 @@ steps:
     script: 'npm install protractor@4.0.8'
     workingDirectory: '$(Build.SourcesDirectory)'
 
-- task: CmdLine@2
-  inputs:
-    script: 'webdriver-manager update'
-    workingDirectory: '$(Build.SourcesDirectory)'
-
-
     
 - task: CmdLine@2
   inputs:
