@@ -11,14 +11,8 @@ pool:
   #vmImage: 'windows-latest'
   name: 'Default'
 
-
 steps:
-
-
-
-
-
-    
+  - 
 - task: CmdLine@2
   inputs:
     script: 'protractor conf.js'
