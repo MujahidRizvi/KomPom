@@ -11,23 +11,14 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
+
 
 - script: |
-    npm install
+     npm run compile
 
-- script: npm install -g @angular/cli
 
-- script: npm install protractor -g
-
-- script: npm install jasmine
-
-- script: npm install --save-dev @types/jasmine
     
 
-  displayName: 'npm install and build'
+  
 
 
