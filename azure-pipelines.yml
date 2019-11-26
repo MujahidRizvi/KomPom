@@ -17,5 +17,13 @@ steps:
 
 - script: |
     npm install
+    npm install protractor -g
     npm run build
+    npm install -g @angular/cli
+    npm install typescript
+    npm install jasmine
+    npm install --save-dev @types/jasmine
+
   displayName: 'npm install and build'
+
+
