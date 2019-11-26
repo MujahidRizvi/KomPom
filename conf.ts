@@ -30,6 +30,7 @@ export let config: Config = {
     },
   specs: ['Specs/spec.js', ],
   seleniumAddress: 'http://localhost:4444/wd/hub',
+  directConnect: true,
   
   framework: 'jasmine2',
   onPrepare: function() {
