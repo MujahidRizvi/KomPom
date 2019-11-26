@@ -13,11 +13,10 @@ pool:
 
 steps:
 
-- task: Npm@1
+- task: CmdLine@2
   inputs:
-    command: 'custom'
-    workingDir: '$(Build.SourcesDirectory)'
-    customCommand: 'npm i protractor'
+    script: 'npm i protractor'
+    workingDirectory: '$(Build.SourcesDirectory)'
 
 
 
