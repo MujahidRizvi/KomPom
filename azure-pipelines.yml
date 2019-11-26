@@ -20,6 +20,10 @@ steps:
     
 - task: CmdLine@2
   inputs:
+    script: 'webdriver-manager start  --standalone'
+    
+- task: CmdLine@2
+  inputs:
     script: 'protractor conf.js'
     workingDirectory: '$(Build.SourcesDirectory)'
 
