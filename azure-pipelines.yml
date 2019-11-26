@@ -15,18 +15,23 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'npm i protractor'
+    script: 'npm install protractor -g'
     workingDirectory: '$(Build.SourcesDirectory)'
 
+- task: CmdLine@2
+  inputs:
+    script: 'npm i wdio-selenium-standalone-service'
+    workingDirectory: '$(Build.SourcesDirectory)'
 
+- task: CmdLine@2
+  inputs:
+    script: 'webdriver-manager update  --standalone'
 
 - task: CmdLine@2
   inputs:
     script: 'webdriver-manager start  --standalone'
 
-- task: CmdLine@2
-  inputs:
-    script: 'webdriver-manager update  --standalone'
+
 
     
 - task: CmdLine@2
