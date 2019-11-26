@@ -15,7 +15,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'npm install protractor@4.0.8'
+    script: 'npm install protractor@5.3.2'
     workingDirectory: '$(Build.SourcesDirectory)'
 
     
