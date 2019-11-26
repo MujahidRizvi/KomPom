@@ -17,16 +17,21 @@ steps:
   inputs:
     script: 'npm install protractor -g'
     workingDirectory: '$(Build.SourcesDirectory)'
+
+-   task: Npm@1
+    inputs:
+        command: 'custom'
+        workingDir: '$(Build.SourcesDirectory)'
+        customCommand: 'npm run test'
+        customRegistry: 'useFeed'
+        customFeed: 'de7d0501-c2c0-43d0-a359-f74222c5a753'
     
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
     script: 'Start-Process webdriver-manager Start'
     
-- task: CmdLine@2
-  inputs:
-    script: 'protractor conf.js'
-    workingDirectory: '$(Build.SourcesDirectory)'
+- 
 
     
 
